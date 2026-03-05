@@ -1,0 +1,19 @@
+/* Services page styles – populated when screenshot is received */
+.page-banner {
+    background: #c8390a;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.placeholder-notice {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 40px 0;
+}
