@@ -14,8 +14,8 @@ const projects = [
             ar: 'محطة الملز الكهربائية – الرياض',
         },
         description: {
-            en: 'Supply, installation and commissioning of a 132/13.8 kV outdoor substation for the Saudi Electricity Company. Works included civil, mechanical and electrical scopes totaling SR 45 million.',
-            ar: 'توريد وتركيب وتشغيل محطة تحويل 132/13.8 كيلوفولت للشركة السعودية للكهرباء. شملت الأعمال المدنية والميكانيكية والكهربائية بقيمة إجمالية 45 مليون ريال.',
+            en: 'Supply, installation and commissioning of a 132/13.8 kV outdoor substation for the Saudi Electricity Company. Works included civil, mechanical and electrical scopes.',
+            ar: 'توريد وتركيب وتشغيل محطة تحويل 132/13.8 كيلوفولت للشركة السعودية للكهرباء. شملت الأعمال المدنية والميكانيكية والكهربائية.',
         },
         client: { en: 'Saudi Electricity Company (SEC)', ar: 'الشركة السعودية للكهرباء' },
         year: '2015',
@@ -29,8 +29,8 @@ const projects = [
             ar: 'وزارة الصحة – التكييف والسباكة',
         },
         description: {
-            en: 'Full mechanical scope for a 600-bed hospital in Riyadh including HVAC, medical gas supply, fire protection and sanitary installations. Project value SR 30 million.',
-            ar: 'تنفيذ المدى الميكانيكي الكامل لمستشفى 600 سرير بالرياض يشمل التكييف وإمدادات الغاز الطبي والحماية من الحريق والتمديدات الصحية بقيمة 30 مليون ريال.',
+            en: 'Full mechanical scope for a 600-bed hospital in Riyadh including HVAC, medical gas supply, fire protection and sanitary installations.',
+            ar: 'تنفيذ المدى الميكانيكي الكامل لمستشفى 600 سرير بالرياض يشمل التكييف وإمدادات الغاز الطبي والحماية من الحريق والتمديدات الصحية.',
         },
         client: { en: 'Ministry of Health', ar: 'وزارة الصحة' },
         year: '2018',
@@ -44,8 +44,8 @@ const projects = [
             ar: 'منشآت الحرس الوطني – الرياض',
         },
         description: {
-            en: 'Design and build of administrative complex including structural, architectural, electromechanical and infrastructure works. Total built-up area 12,000 m² with a project value of SR 60 million.',
-            ar: 'تصميم وبناء مجمع إداري يشمل الأعمال الإنشائية والمعمارية والكهروميكانيكية والبنية التحتية. المساحة الإجمالية 12,000 م² بقيمة 60 مليون ريال.',
+            en: 'Design and build of administrative complex including structural, architectural, electromechanical and infrastructure works. Total built-up area 12,000 m² .',
+            ar: 'تصميم وبناء مجمع إداري يشمل الأعمال الإنشائية والمعمارية والكهروميكانيكية والبنية التحتية. المساحة الإجمالية 12,000 م² .',
         },
         client: { en: 'Saudi Arabian National Guard (SANG)', ar: 'الحرس الوطني السعودي' },
         year: '2020',
