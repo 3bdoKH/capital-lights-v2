@@ -16,7 +16,7 @@ const logos = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10];
 const certificate = c11;
 
 function Clients({ lang }) {
-    const ar = lang === 'ar';
+    // const ar = lang === 'ar';
 
     return (
         <div className="clients page-content">

@@ -10,7 +10,7 @@ const slides = [slider1, slider2, slider3, slider4, slider5];
 
 function Home({ lang }) {
     const [current, setCurrent] = useState(0);
-    const ar = lang === 'ar';
+    // const ar = lang === 'ar';
 
     const next = useCallback(() => {
         setCurrent((prev) => (prev + 1) % slides.length);
