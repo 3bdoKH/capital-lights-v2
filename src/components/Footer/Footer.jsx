@@ -44,7 +44,7 @@ function Footer({ lang }) {
 
                     {/* Col 3 – Quick Links */}
                     <div className="footer__col">
-                        <h4 className="footer__heading footer__heading--hidden">Quick Links</h4>
+                        {/* <h4 className="footer__heading footer__heading--hidden">Quick Links</h4> */}
                         <ul className="footer__links">
                             {quickLinks.map((item) => (
                                 <li key={item.to}>

@@ -2,7 +2,8 @@
 .page-banner {
     background: #c8390a;
     color: #fff;
-    padding: 40px 20px;
+    padding: 140px 20px 40px;
+    /* Increased top padding for absolute navbar */
     text-align: center;
 }
 

@@ -3,27 +3,29 @@
    =========================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
   /* Brand Colors */
-  --orange:       #c8390a;
+  --orange: #c8390a;
   --orange-light: #d94e1f;
-  --orange-dark:  #a82d06;
+  --orange-dark: #a82d06;
 
   /* Neutrals */
-  --dark:         #3a3a3a;
-  --dark-alt:     #444444;
-  --mid:          #555555;
-  --light-bg:     #f5f5f5;
-  --white:        #ffffff;
-  --border:       #e0e0e0;
+  --dark: #3a3a3a;
+  --dark-alt: #444444;
+  --mid: #555555;
+  --light-bg: #f5f5f5;
+  --white: #ffffff;
+  --border: #e0e0e0;
 
   /* Footer */
-  --footer-bg:    #555555;
-  --footer-bar:   #3a3a3a;
+  --footer-bg: #555555;
+  --footer-bar: #3a3a3a;
 
   /* Typography */
-  --font-en: 'Roboto', Arial, sans-serif;
+  /* --font-en: 'Roboto', Arial, sans-serif; */
+  --font-en: 'Lato';
   --font-ar: 'Amiri', 'Arial', serif;
 
   /* Spacing */
@@ -34,7 +36,9 @@
 /* ===========================
    RESET
    =========================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

@@ -6,7 +6,8 @@
 .projects__banner {
     background: #c8390a;
     color: #fff;
-    padding: 40px 28px;
+    padding: 140px 28px 40px;
+    /* Increased top padding for absolute navbar */
     text-align: center;
 }
 

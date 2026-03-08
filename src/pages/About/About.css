@@ -5,7 +5,8 @@
 /* ---- Profile Section ---- */
 .about__profile {
     background: #f9f9f9;
-    padding: 48px 0 40px;
+    padding: 140px 0 40px;
+    /* Increased top padding for absolute navbar */
     border-bottom: 1px solid #e8e8e8;
 }
 

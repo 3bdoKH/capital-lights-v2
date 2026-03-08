@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from '../../media/MLogo.png';
+import flagUK from '../../media/flag_uk.png';
+import flagSA from '../../media/flag_sa.png';
 import './Navbar.css';
 
 const navItems = [
+
   { label: 'Home', labelAr: 'الرئيسية', to: '/' },
   { label: 'Email', labelAr: 'البريد', to: '#' },
   { label: 'About', labelAr: 'عن الشركة', to: '/about' },
@@ -29,6 +32,26 @@ function Navbar({ lang, toggleLang }) {
 
   return (
     <nav className="navbar">
+      <div className="navbar__top">
+        <div className="navbar__top-inner">
+          <div className="navbar__lang-switcher">
+            <button
+              className={`navbar__flag-btn ${!ar ? 'active' : ''}`}
+              onClick={() => ar && toggleLang()}
+              title="English"
+            >
+              <img src={flagUK} alt="English" />
+            </button>
+            <button
+              className={`navbar__flag-btn ${ar ? 'active' : ''}`}
+              onClick={() => !ar && toggleLang()}
+              title="العربية"
+            >
+              <img src={flagSA} alt="Arabic" />
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="navbar__inner">
         {/* Logo */}
         <Link to="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
@@ -72,13 +95,8 @@ function Navbar({ lang, toggleLang }) {
             </li>
           ))}
 
-          {/* Language Toggle */}
-          <li className="navbar__item">
-            <button className="navbar__lang-btn" onClick={toggleLang}>
-              {ar ? 'EN' : 'عر'}
-            </button>
-          </li>
         </ul>
+
 
         {/* Hamburger */}
         <button

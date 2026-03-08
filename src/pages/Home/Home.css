@@ -8,10 +8,11 @@
     width: 100%;
     overflow: hidden;
     background: #111;
-    /* Fill viewport height minus navbar */
-    height: calc(100vh - 70px);
+    /* Fill viewport height since navbar is now absolute */
+    height: 100vh;
     min-height: 400px;
     max-height: 680px;
+    margin-top: 35px;
 }
 
 .slider__track {
