@@ -53,59 +53,61 @@ function Navbar({ lang, toggleLang }) {
         </div>
       </div>
       <div className="navbar__inner">
-        {/* Logo */}
-        <Link to="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
-          <img src={logo} alt="Capital Lights Logo" />
-        </Link>
+        <div className="navbar_items">
+          {/* Logo */}
+          <Link to="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
+            <img src={logo} alt="Capital Lights Logo" />
+          </Link>
 
-        {/* Desktop Nav */}
-        <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
-          {navItems.map((item) => (
-            <li
-              key={item.to}
-              className={`navbar__item ${item.children ? 'navbar__item--dropdown' : ''}`}
-              onMouseEnter={() => item.children && setActiveDropdown(item.to)}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <NavLink
-                to={item.to}
-                className={({ isActive }) =>
-                  'navbar__link' + (isActive ? ' navbar__link--active' : '')
-                }
-                onClick={() => setMenuOpen(false)}
+          {/* Desktop Nav */}
+          <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
+            {navItems.map((item) => (
+              <li
+                key={item.to}
+                className={`navbar__item ${item.children ? 'navbar__item--dropdown' : ''}`}
+                onMouseEnter={() => item.children && setActiveDropdown(item.to)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                {ar ? item.labelAr : item.label}
-                {item.children && <span className="navbar__arrow">▾</span>}
-              </NavLink>
-              {item.children && (
-                <ul className={`navbar__dropdown ${activeDropdown === item.to ? 'navbar__dropdown--open' : ''}`}>
-                  {item.children.map((child) => (
-                    <li key={child.to}>
-                      <NavLink
-                        to={child.to}
-                        className="navbar__dropdown-link"
-                        onClick={() => { setMenuOpen(false); setActiveDropdown(null); }}
-                      >
-                        {ar ? child.labelAr : child.label}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    'navbar__link' + (isActive ? ' navbar__link--active' : '')
+                  }
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {ar ? item.labelAr : item.label}
+                  {item.children && <span className="navbar__arrow">▾</span>}
+                </NavLink>
+                {item.children && (
+                  <ul className={`navbar__dropdown ${activeDropdown === item.to ? 'navbar__dropdown--open' : ''}`}>
+                    {item.children.map((child) => (
+                      <li key={child.to}>
+                        <NavLink
+                          to={child.to}
+                          className="navbar__dropdown-link"
+                          onClick={() => { setMenuOpen(false); setActiveDropdown(null); }}
+                        >
+                          {ar ? child.labelAr : child.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
 
-        </ul>
+          </ul>
 
 
-        {/* Hamburger */}
-        <button
-          className={`navbar__hamburger ${menuOpen ? 'navbar__hamburger--open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span /><span /><span />
-        </button>
+          {/* Hamburger */}
+          <button
+            className={`navbar__hamburger ${menuOpen ? 'navbar__hamburger--open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span /><span /><span />
+          </button>
+        </div>
       </div>
     </nav>
   );

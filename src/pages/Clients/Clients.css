@@ -3,7 +3,7 @@
    =========================== */
 .clients__grid-section {
     background: #ffffff;
-    padding: 40px 0 48px;
+    padding: 160px 0 48px;
 }
 
 .clients__container {
@@ -17,17 +17,13 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0;
-    border-top: 1px solid #e8e8e8;
-    border-left: 1px solid #e8e8e8;
 }
 
 .clients__logo-cell {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 28px 20px;
-    border-right: 1px solid #e8e8e8;
-    border-bottom: 1px solid #e8e8e8;
+    padding: 28px 10px;
     background: #fff;
     transition: background 0.2s;
 }
@@ -52,9 +48,6 @@
     display: flex;
     justify-content: center;
     margin-top: 0;
-    border-left: 1px solid #e8e8e8;
-    border-right: 1px solid #e8e8e8;
-    border-bottom: 1px solid #e8e8e8;
 }
 
 .clients__cert-cell {
@@ -64,7 +57,6 @@
     padding: 28px 20px;
     width: 20%;
     /* same width as one grid cell */
-    border-right: 1px solid #e8e8e8;
 }
 
 .clients__cert-cell img {

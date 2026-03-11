@@ -2,8 +2,7 @@
    CONTACT PAGE
    =========================== */
 .contact__section {
-    background: #f7f7f7;
-    padding: 140px 0 56px;
+    padding: 160px 0 56px;
     /* Increased top padding for absolute navbar */
     min-height: 500px;
 }
