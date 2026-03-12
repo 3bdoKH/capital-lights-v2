@@ -28,7 +28,7 @@ function Contact({ lang }) {
                         <h2 className="contact__heading">{ar ? 'اتصل بنا' : 'Contact Us'}</h2>
                         <ul className="contact__list">
                             <li>{ar ? 'الرمز البريدي في المملكة العربية السعودية' : 'Postal Code in the Kingdom of Saudi Arabia'}</li>
-                            <li>{ar ? 'شركة أضواء العاصمة للكهروميكانيك.' : 'Capital Lights Co. For Electromechanics.'}</li>
+                            <li>{ar ? 'شركة أضواء العاصمة للكهروميكانيكا' : 'Capital Lights Co. For Electromechanics.'}</li>
                             <li>{ar ? 'ص.ب 2632، الرياض 11461' : 'P.O. Box 2632, Riyadh 11461'}</li>
                             <li>
                                 {ar ? 'هاتف:' : 'Tel:'} 0096614707002 / 0096614707003&nbsp;

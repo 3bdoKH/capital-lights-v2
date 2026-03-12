@@ -27,7 +27,9 @@
   /* Typography */
   /* --font-en: 'Roboto', Arial, sans-serif; */
   --font-en: 'Lato';
-  --font-ar: 'Amiri', 'Arial', serif;
+  --font-ar: 'GE-SS-Two';
+  --font-en-footer: 'Antic Slab';
+  --font-en-pt: 'PT Sans';
 
   /* Spacing */
   --section-pad: 60px 0;

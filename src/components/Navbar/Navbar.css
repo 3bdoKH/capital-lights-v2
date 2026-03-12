@@ -7,17 +7,18 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    font-family: "Lato" !important;
+    box-shadow: 0 1px 8px #c0c0c0;
 }
 
 .navbar__top {
     background: #CD4C2C;
     /* Solid top bar color from screenshot */
-    height: 35px;
+    height: 33px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    border-bottom: 2px solid #515150;
 }
 
 .navbar__top-inner {
@@ -97,7 +98,6 @@
 
 .navbar__logo-ar {
     font-size: 1rem;
-    font-family: 'Amiri', serif;
     color: #CD4C2C;
     font-weight: 700;
 }

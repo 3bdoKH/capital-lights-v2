@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from '../../media/MLogo.png';
 import flagUK from '../../media/flag_uk.png';
@@ -27,7 +27,7 @@ const navItems = [
 function Navbar({ lang, toggleLang }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
+  const [active, setactive] = useState('Home')
   const ar = lang === 'ar';
 
   return (
@@ -67,13 +67,15 @@ function Navbar({ lang, toggleLang }) {
                 className={`navbar__item ${item.children ? 'navbar__item--dropdown' : ''}`}
                 onMouseEnter={() => item.children && setActiveDropdown(item.to)}
                 onMouseLeave={() => setActiveDropdown(null)}
+                style={ar ? { fontFamily: 'GE-SS-Two' } : {}}
               >
                 <NavLink
                   to={item.to}
-                  className={({ isActive }) =>
-                    'navbar__link' + (isActive ? ' navbar__link--active' : '')
-                  }
-                  onClick={() => setMenuOpen(false)}
+                  className={`navbar__link ${active === item.label ? 'navbar__link--active' : ''}`}
+                  onClick={() => {
+                    setMenuOpen(false)
+                    setactive(item.label)
+                  }}
                 >
                   {ar ? item.labelAr : item.label}
                   {item.children && <span className="navbar__arrow">▾</span>}

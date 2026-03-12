@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import './index.css';
+import './fonts/arabic.css'
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -23,12 +24,18 @@ function ScrollToTop() {
 }
 
 function AppInner() {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState(() => {
+    return localStorage.getItem('app_lang') || 'en';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('app_lang', lang);
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    document.body.classList.toggle('rtl', lang === 'ar');
+  }, [lang]);
 
   const toggleLang = () => {
     setLang((prev) => (prev === 'en' ? 'ar' : 'en'));
-    document.documentElement.setAttribute('dir', lang === 'en' ? 'rtl' : 'ltr');
-    document.body.classList.toggle('rtl', lang === 'en');
   };
 
   return (

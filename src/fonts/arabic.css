@@ -1,0 +1,7 @@
+/* src/fonts/arabic.css */
+@font-face {
+    font-family: 'GE-SS-Two';
+    src: url('./ArbFONTS-GE-SS-Two-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}

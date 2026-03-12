@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -13,9 +13,9 @@ const quickLinks = [
 
 function Footer({ lang }) {
     const ar = lang === 'ar';
-
+    const [active, setactive] = useState('Home')
     return (
-        <footer className="footer">
+        <footer className="footer" style={ar ? { fontFamily: 'GE-SS-Two' } : {}}>
             <div className="footer__main">
                 <div className="footer__container">
 
@@ -24,7 +24,7 @@ function Footer({ lang }) {
                         <h4 className="footer__heading">{ar ? 'عن الشركة' : 'ABOUT US'}</h4>
                         <p className="footer__text">
                             {ar
-                                ? 'مؤسسة أضواء العاصمة للمقاولات الكهروميكانيكية، تأسست عام 1387هـ (1967م) لتنفيذ مشاريع الكهروميكانيك والأعمال المدنية.'
+                                ? 'شركة اضواء العاصمة للكهروميكانيكا، تأسست عام 1387هـ (1967م) لتنفيذ مشاريع الكهروميكانيك والأعمال المدنية.'
                                 : 'Capital Lights Co. for Electro-mechanics Contracting Establishment was established in 1387(1967) to carry our electro-mechanics and civil work contracts. The Establishment started operations and managed to build good reputation in the contracting sector in the Kingdom with the onset of early development take off in the country.'}
                         </p>
                     </div>
@@ -48,7 +48,10 @@ function Footer({ lang }) {
                         <ul className="footer__links">
                             {quickLinks.map((item) => (
                                 <li key={item.to}>
-                                    <Link to={item.to} className="footer__link">
+                                    <Link to={item.to} className={`footer__link ${active === item.label ? 'footer__link--active' : ''}`}
+                                        style={ar ? { fontFamily: 'GE-SS-Two' } : { fontFamily: 'Arial', fontWeight: 'lighter' }}
+                                        onClick={() => setactive(item.label)}
+                                    >
                                         <span className="footer__link-arrow">{'>'}</span>
                                         {ar ? item.labelAr : item.label}
                                     </Link>
