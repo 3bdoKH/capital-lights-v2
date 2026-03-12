@@ -21,7 +21,7 @@ function Home({ lang }) {
     };
 
     useEffect(() => {
-        const interval = setInterval(next, 4500);
+        const interval = setInterval(next, 10000);
         return () => clearInterval(interval);
     }, [next]);
 
